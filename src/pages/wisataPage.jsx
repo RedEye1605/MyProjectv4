@@ -12,6 +12,63 @@ const WisataHeader = ({judul}) => {
         </div>
     )
 }
+
+const wisatas = [
+    {
+        id: 1,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    },
+    {
+        id: 2,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    },
+    {
+        id: 3,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    },
+    {
+        id: 4,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    },
+    {
+        id: 5,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    },
+    {
+        id: 6,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    },
+    {
+        id: 7,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    },
+    {
+        id: 8,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    },
+    {
+        id: 9,
+        title: "Kelas Aksara Jawa",
+        desc: "Untuk Mempelajari Bahasa Jawa",
+        url: "https://images.app.goo.gl/niTSjT4vN2LXVDru8"
+    }
+]
 const WisataPage = () => {
     return(
         <>
@@ -20,8 +77,19 @@ const WisataPage = () => {
             <div className="main">
                 <div className="container" id="main_content">
                     <p>Selamat datang di Daringan Kelurahan Ngaglik, sebuah destinasi yang memadukan potensi seni dan budaya untuk menghadirkan kearifan lokal sebagai Wilayah Layak Wisata. Terletak di jantung Kota Wisata Batu, Daringan Ngaglik menawarkan berbagai pengalaman yang kaya akan nilai-nilai tradisional dan keindahan budaya. Mari jelajahi berbagai program dan kegiatan kami:</p>
-                    <div class="wisata_1">
-                        <h6><b>1. Kelas Aksara Jawa</b></h6>
+
+                    {wisatas.map((wisata) =>
+                            <div class="wisata_1">
+                            <h6><b>{wisata.id}. {wisata.title}</b></h6>
+                            <div class="container" id="desc_1">                            
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7-VBdSEEJQfaJAjUyENdnHFFMkGBRIyksrTb7mVH8ZDwKVuxNkUL1rNZyq6eg6OmS0nk&usqp=CAU" alt="kelas aksara jawa" />
+                                <p>{wisata.desc}</p>
+                            </div>
+                            <a href="https://images.app.goo.gl/niTSjT4vN2LXVDru8">https://images.app.goo.gl/niTSjT4vN2LXVDru8</a>
+                        </div>
+                    )}
+                    {/* <div class="wisata_1">
+                        <h6><b><p>1.</p> Kelas Aksara Jawa</b></h6>
                         <div class="container" id="desc_1">
                             <p>Pelajari dan lestarikan aksara Jawa, salah satu warisan budaya Indonesia yang kaya akan sejarah dan makna.</p>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7-VBdSEEJQfaJAjUyENdnHFFMkGBRIyksrTb7mVH8ZDwKVuxNkUL1rNZyq6eg6OmS0nk&usqp=CAU" alt="kelas aksara jawa" />
@@ -91,7 +159,7 @@ const WisataPage = () => {
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7-VBdSEEJQfaJAjUyENdnHFFMkGBRIyksrTb7mVH8ZDwKVuxNkUL1rNZyq6eg6OmS0nk&usqp=CAU" alt="Sarasehan Budaya" />
                         </div>
                         <a href="https://images.app.goo.gl/niTSjT4vN2LXVDru8">https://images.app.goo.gl/niTSjT4vN2LXVDru8</a>
-                    </div>
+                    </div> */}
                 </div>            
             </div>
             

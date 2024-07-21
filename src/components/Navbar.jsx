@@ -1,8 +1,14 @@
 import React from "react";
 import './Navbar.css';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
+
+    const location = useLocation();
+    const getLinkStyle = (paths) => {
+        return paths.includes(location.pathname) ? {color: '#FFCA42'} : {color: '#FFFFFF'}
+    };
+
     return(
         <nav class="navbar navbar-expand-lg">
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5tD5Xe_SQ-7_Hm47dwSArmpr2fhi2yvzNyOdkLf82I6HJ346GjUP11kWRs42vQ6GMvJv49VoSyWy1816EyQ3ceDoWiuhMsFMhcb8vlYEJQLC-IeAUbj7A9lVSuGrcGRHFl8AwddyLQKBwv9vcH9y1ZiOz61ig8KtEtNOos2KEmiX06TY2qrNkij8P/w400-h300/Logo%20Kota%20Batu.png" alt="logo kota Batu" />
@@ -16,15 +22,15 @@ const Navbar = () => {
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <Link to={'/'}><b>Home</b></Link></li>
+                        <Link to={'/'}><b style={getLinkStyle(['/'])}>Home</b></Link></li>
                     <li class="nav-item">
-                        <Link to={'/profil'}><b>Profil</b></Link></li>
+                        <Link to={'/profil'} ><b style={getLinkStyle(['/profil'])}>Profil</b></Link></li>
                     <li class="nav-item">
-                        <Link to={'/berita'}><b>Berita</b></Link></li>
+                        <Link to={'/berita'}><b style={getLinkStyle(['/berita'])}>Berita</b></Link></li>
                     <li class="nav-item">
-                        <Link to={'/peta'}><b>Peta</b></Link></li>
+                        <Link to={'/peta'}><b style={getLinkStyle(['/peta'])}>Peta</b></Link></li>
                     <li class="nav-item">
-                        <Link to={'/wisata'}><b>Wisata</b></Link></li>
+                        <Link to={'/wisata'}><b style={getLinkStyle(['/wisata', '/wisata2'])} >Wisata</b></Link></li>
                 </ul>
             </div>
         </nav>

@@ -1,6 +1,9 @@
 import React from "react";
 import './Footer.css';
 import { Link } from "react-router-dom";
+import { SocialIcon } from 'react-social-icons/component'
+import 'react-social-icons/instagram'
+import 'react-social-icons/youtube'
 
 const Footer = () => {
     return(
@@ -14,7 +17,11 @@ const Footer = () => {
                 </div>
                 <div className="kontak">
                 <h5><b><Link to={"/profil"}>Kontak Kami</Link></b></h5>
-                <p>Kelurahan Ngaglik - Kecamatan Batu <br /> Kota Batu - Provinsi Jawa Timur, Indonesia</p>
+                <p>Kelurahan Ngaglik - Kecamatan Batu <br /> 
+                Kota Batu - Provinsi Jawa Timur, Indonesia <br />
+                <br />
+            <SocialIcon url='https://www.instagram.com/ngaglik_official?igsh=MnI1aDNpcmNkd3Bo'/> <SocialIcon url="https://youtube.com/@daringanngagliktvdesa1477?si=5xiG_4P0Z_pfbKMR" /></p>
+                <a href=""></a>
                 </div>
             </div>
         </footer>

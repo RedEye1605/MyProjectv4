@@ -14,7 +14,10 @@ import { Link } from "react-router-dom";
 //   );
 // }
 
-const HomePage = () => {
+const HomePage = ({articles}) => {
+    console.log("Home Page")
+    console.log(articles)
+
   const carousels = [
     {
       id: 1,
@@ -59,6 +62,29 @@ const HomePage = () => {
       desc: "Kelurahan Ngaglik memiliki banyak wisata yang bisa dikunjungi oleh penduduk lokal maupun turis lokal bahkan mancaneagara.",
     },
   ];
+
+  const articlesForHomes = [
+    {
+      id: 1,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNccyl3VZ_rJzAw-DB0FW9fsMyoKTs1Il0WQ&s",
+      title: "This is The News!"
+    },
+    {
+      id: 2,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNccyl3VZ_rJzAw-DB0FW9fsMyoKTs1Il0WQ&s",
+      title: "This is The News!"
+    },
+    {
+      id: 3,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNccyl3VZ_rJzAw-DB0FW9fsMyoKTs1Il0WQ&s",
+      title: "This is The News!"
+    },
+    {
+      id: 4,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNccyl3VZ_rJzAw-DB0FW9fsMyoKTs1Il0WQ&s",
+      title: "This is The News!"
+    }
+  ]
 
   return (
     <>
@@ -133,46 +159,19 @@ const HomePage = () => {
           </h4>
           <div class="separator-home" id="separator-berita"></div>
           <div class="card_news">
+
+          {articlesForHomes.map((articleforhome) =>
             <div className="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNccyl3VZ_rJzAw-DB0FW9fsMyoKTs1Il0WQ&s"
-                alt="berita"
-                class="card-img-top"
-              />
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-            <div className="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNccyl3VZ_rJzAw-DB0FW9fsMyoKTs1Il0WQ&s"
-                alt="berita"
-                class="card-img-top"
-              />
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-            <div className="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNccyl3VZ_rJzAw-DB0FW9fsMyoKTs1Il0WQ&s"
-                alt="berita"
-                class="card-img-top"
-              />
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-            <div className="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNccyl3VZ_rJzAw-DB0FW9fsMyoKTs1Il0WQ&s"
-                alt="berita"
-                class="card-img-top"
-              />
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
+            <img
+              src={articleforhome.img}
+              alt="berita"
+              class="card-img-top"
+            />
+            <p class="card-text">
+              {articleforhome.title}
+            </p>
+          </div>
+          )}        
           </div>
         </div>
         <div id="wisata">
